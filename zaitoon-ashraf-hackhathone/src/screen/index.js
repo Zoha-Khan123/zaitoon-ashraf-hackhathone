@@ -7,9 +7,11 @@ import Dashboard from "./Dashboard";
 import AddEditTask from "./AddEditTask";
 import ShowData from "./ShowData";
 import Header from "../components/Header";
+import NotFound from "./NotFound";
+import BackButton from "../components/BackButton";
 
 
 
 
 
-export {Signup,Login,Home,Loader,ProtectedRoute,Dashboard,AddEditTask,ShowData,Header}
+export {Signup,Login,Home,Loader,ProtectedRoute,Dashboard,AddEditTask,ShowData,Header,NotFound,BackButton}

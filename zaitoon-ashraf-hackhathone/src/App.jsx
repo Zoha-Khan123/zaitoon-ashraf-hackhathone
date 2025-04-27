@@ -1,6 +1,6 @@
 import React , { useEffect } from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import { Home , Signup , Login, ProtectedRoute ,Dashboard, AddEditTask  } from './screen'
+import { Home , Signup , Login, ProtectedRoute ,Dashboard, AddEditTask, NotFound  } from './screen'
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -25,6 +25,8 @@ const App = () => {
     <Route path="/dashboard" element={<ProtectedRoute> <Dashboard /></ProtectedRoute>} />
 
     <Route path="/add" element={<AddEditTask/>}></Route>
+
+    <Route path="*" element={<NotFound/>}></Route>
 
    
    

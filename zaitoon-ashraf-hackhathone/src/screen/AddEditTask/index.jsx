@@ -3,6 +3,7 @@ import { doc, setDoc, collection, addDoc, updateDoc } from "firebase/firestore";
 import { db } from '../../Firebase/firebaseConfig';
 import { toast } from 'react-toastify';
 import { useLocation, useNavigate } from 'react-router-dom';
+import { FaArrowLeft } from 'react-icons/fa';
 
 const AddEditTask = () => {
     const location = useLocation();
@@ -60,6 +61,17 @@ const AddEditTask = () => {
     return (
       <div className="flex items-center justify-center min-h-screen bg-gray-50 p-4">
          <div className="max-w-md w-full mx-auto p-6 bg-white rounded-lg shadow-md">
+            
+           {/* Back Button with Arrow Icon */}
+           <button 
+                onClick={() => navigate(-1)}
+                className="flex items-center text-gray-600 hover:text-black mb-4 transition-colors"
+            >
+            <FaArrowLeft className="mr-2" />
+            Back
+            </button>
+
+
             <h1 className="text-2xl font-bold text-black mb-6">
                 {task.id ? "Edit Task" : "Create Task"}
             </h1>
